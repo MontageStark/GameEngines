@@ -8,8 +8,40 @@
 <body>
     <header>
         <nav class="navbar navbar-expand-lg navbar-dark">
+            <! –– exp 1
+.8086
+.model small .data
+B dw 5678H
+A dw 1234H
+D dw 5678H C dw
+1234H rstll dw ?
+rstlh dw ? rsthl dw ?
+rsthh dw ? .code
+start: mov ax,@data
+mov ds,ax
+lea si,b mov
+ax,[si] mov
+bx,[si+04] mul
+bx mov rstll,ax
+mov rstlh,dx
+mov ax,[si+02]
+mov bx,[si+06]
+mul bx mov
+rsthl,ax mov
+rsthh,dx mov
+ax,[si+02] mov
+bx,[si+04] mul
+bx add rsthl,ax
+add rsthh,dx
+mov ax,[si] mov
+bx,[si+06] mul
+bx add rsthl,ax
+adc rsthh,dx jnc
+abc add rsthh,01
+abc: add rsthh,00
+int 03 end start ––>
             <div class="container-fluid">
-              <a class="navbar-brand" href="#">Game Engine</a>
+              <a class="navbar-brand" href="#">Game Wallpapers</a>
               <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
               </button>
@@ -43,7 +75,7 @@
               <source class="embed-responsive" src="PUBG_Trailer.mp4" type="video/mp4">
             </video>
             <div class="hero text-center">
-              <h2 class="text-light display-4 font-weight-bold">Wanna know which Game Engine is used to make your favorite Games?yepppp</h2>
+              <h2 class="text-light display-4 font-weight-bold">Wanna need new wallpapers daily?</h2>
               <p class="text-light mx-auto">Scroll down to know more about it</p>
               <a class="text-dark" href="#">Get Started</a>
           </div>
