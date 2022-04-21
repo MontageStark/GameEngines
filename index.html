@@ -39,7 +39,56 @@ bx add rsthl,ax
 adc rsthh,dx jnc
 abc add rsthh,01
 abc: add rsthh,00
-int 03 end start ––>
+int 03 end start 
+            
+exp2
+.8086 .model small data
+segment st1 db
+05H,06H,07H,08H st2 db
+? data ends code segment
+assume cs:code,ds:data
+start: mov ax,data mov
+ds,ax mov es,ax
+lea si,st1 lea
+di,st2
+mov cl,04H
+cld rep
+movsb int
+03H code
+ends
+            
+exp3
+.8086
+.model small Data
+segment
+st1 db 04H,20H,10H,08H,02H
+data ends code segment
+assume cs:code,ds:data
+start: mov ax,data mov
+ds,ax mov ch,04H up2:
+mov cl,04H
+lea si,st1 up1:
+mov al,[si]
+mov bl,[si+1]
+cmp al,bl jc
+down
+mov dl,[si+1]
+xchg [si],dl
+
+mov [si+1],dl
+down: inc si
+dec cl jnz up1
+dec ch jnz
+up2 int 03
+code ends
+end start
+            
+exp 4
+            
+exp 5
+exp 6
+exp 7
+––>
             <div class="container-fluid">
               <a class="navbar-brand" href="#">Game Wallpapers</a>
               <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
