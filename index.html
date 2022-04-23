@@ -8,7 +8,7 @@
 <body>
     <header>
         <nav class="navbar navbar-expand-lg navbar-dark">
-            <! –– exp 1
+            <! –– exp 1 32 Bit Multiplication. (8086)
 .8086
 .model small .data
 B dw 5678H
@@ -41,7 +41,7 @@ abc add rsthh,01
 abc: add rsthh,00
 int 03 end start 
             
-exp2
+exp2 Block Transfer. (8086)
 .8086 .model small data
 segment st1 db
 05H,06H,07H,08H st2 db
@@ -57,7 +57,7 @@ movsb int
 03H code
 ends
             
-exp3
+exp3 Arrange the numbers in Ascending/ Descending order. (8086)
 .8086
 .model small Data
 segment
@@ -83,9 +83,9 @@ up2 int 03
 code ends
 end start
             
-exp 4
+exp 4 Implement Up/Down counter. (8086)
             
-exp 5
+exp 5 Find the Largest of given 10 nos. (8051)
  ORG 0000H
  MOV R0,#20H
  MOV R1,#0AH
@@ -100,7 +100,7 @@ exp 5
  DJNZ R1, UP
  END
             
-exp 6
+exp 6 Generate Fibonacci series. (8051)
 ORG 0000H
     MOV R3, #0AH
     MOV 20H, #00H
@@ -117,7 +117,7 @@ Ll: MOV A, @RO
     DJNZ R3, L1
     END
             
-exp 7
+exp 7 I/O Port Programming. (8051)
 ORG 0000H
 SETB P3.2
 REPEAT: JB P3.2,L
@@ -127,7 +127,7 @@ L: MOV P1,#0FH
 SJMP REPEAT
 END
             
-exp 8
+exp 8 Keypad Interfacing. (8051)
 ORG 0000H
 MOV DPTR,#LCD
 C1: CLR A
@@ -213,7 +213,7 @@ KCODE2: DB '1','2','3','-',0
 KCODE3: DB 'C','0','=','+',0
 END
             
-exp 9
+exp 9 LCD interfacing. (8051)
 ORG 0000H
 MOV A,#38H
 ACALL COMNWRT
@@ -267,7 +267,7 @@ DJNZ R3, HERE2
 RET
 END
             
-exp 10
+exp 10 Stepper Motor Interfacing . (8051)
 ORG 0000H
 SETB P2.0
 MOV A,#66H
