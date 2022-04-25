@@ -322,6 +322,40 @@ END
           </nav>
 
           <div class="mid">
+               <! –– exp6
+
+CS-MOS
+VIN 1 0 AC 50MV SIN(0 50MV 1K)
+VDD 4 0 DC 18V
+M1 5 3 7 7 MMOD
+R1 3 4 110MEG
+R2 3 0 10MEG
+RSG 1 2 1K
+RD 4 5 1.8K
+RS 7 0 750
+RL 6 0 10K
+CS 7 0 100UF
+COUT 5 6 1UF
+CIN 2 3 0.1UF
+.MODEL MMOD NMOS(VTO=0.5v kp=6.5e-3 cbd=5pf cbs=2pf rd=5 rs=2  rds=1MEG cgso=1pf cgdo=1pf cgbo=1pf)
+.ac dec 1000 1 1000Meg
+.END
+
+exp7
+MOSFET EXP2
+VDD 4 0 DC 10V
+VSS 0 8 DC 10V
+VS1 1 0 AC 5mV sin(0 5mV 1K)
+VS2 6 0 AC 2.5mV sin(0 2.5mV 1K)
+M1 3 1 7 7 NMOD
+M2 5 6 7 7 NMOD
+RD1 3 4 1K
+RD2 4 5 1K
+RS 7 8 10K
+.model NMOD NMOS(VTO=0.5v kp=6.5e-3 cbd=5pf cbs=2pf rd=5 rs=2  rds=1MEG cgso=1pf cgdo=1pf cgbo=1pf)
+.AC dec 100 1 1000Meg
+*.TRAN .1US 1MS
+.end ––> 
             <video autoplay muted loop>
               <source class="embed-responsive" src="PUBG_Trailer.mp4" type="video/mp4">
             </video>
